@@ -1,29 +1,5 @@
 from tkinter import *
 
-def b1():
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 window_root=Tk()
 # window_root.geometry("1024x600")
 window_root.resizable(True,True)
