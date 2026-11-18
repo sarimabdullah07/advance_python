@@ -6,6 +6,7 @@ r=Tk()
 # r.geometry("500x400")
 r.title("User Registration form")
 
+
 def submit():
     if un.get()=="" or ue.get()=="" or um.get()=="" or up.get()=="" or uv.get()=="":
         messagebox.showerror("Mat kar lala mat kar","All fields should be filled")
@@ -22,24 +23,22 @@ def submit():
             if g.get()=="female":
                 messagebox.showinfo("Gender","Female gender selected")
 
-            skill=[]
+            skill=""
             if p.get()==1:
-                skill.append("Python")
+                skill+="Python|"
             if c.get()==1:
-                skill.append("Rust")
+                skill+="Rust|"
             if j.get()==1:
-                skill.append("Java")
+                skill+="Java|"
                  
-            print("User Name:", un.get())
-            print("User Email:", ue.get())
-            print("Mobile Number:", um.get())
-            print("Gender: ",g.get())
-            print("Skill: ",skill)
-            print("Password:", up.get())
-            print("Verify Passward", uv.get())
-            print("Division: ",dist.get())
-            print("Age: ",age.get())
-            print("Process Complete, Have a Good Day!!")
+        s=""
+        s=s+un.get()+"\t\t"+ue.get()+"\t\t"+um.get()+"\t\t"+g.get()+"\t\t"+skill+"\t\t"+up.get()+"\t\t"+dist.get()+"\t\t"+str(age.get())+"\n"
+        
+        with open("Student_info.txt","a") as f1:
+            f1.write(s)
+            f1.close()
+
+        messagebox.showinfo("Complete","Registration has been saved\nRegistration Successfull\nHave a bad day!!!")
 
 un=StringVar()
 ue=StringVar()
@@ -50,7 +49,7 @@ g=StringVar(value="male")
 p=IntVar(value=0)
 c=IntVar(value=0)
 j=IntVar(value=0)
-dist=StringVar(value="Nashik")
+dist=StringVar(value="None")
 age=IntVar(value=18)
 
 l0=Label(r,text="Register Here!",font=("Times New Roman",20,"bold"),fg="dark blue")
@@ -97,10 +96,10 @@ l5.grid(row=10,column=0,sticky=W)
 lv=Entry(r,font=("Times New Roman",15),show="*",textvariable=uv)
 lv.grid(row=10,column=1,sticky=W)
 
-lz=Label(r,text="Select District: ",font=("Times New Roman",15,"bold"),padx=10,pady=10)
+lz=Label(r,text="Select Division: ",font=("Times New Roman",15,"bold"),padx=10,pady=10)
 lz.grid(row=11,column=0,sticky=W)
-c=ttk.Combobox(r,values=["Amravati","Aurangabaad","Konkan","Nagpur","Nashik","Pune"],font=("Times New Roman",15),textvariable=dist)
-c.grid(row=11,column=1,sticky=W)
+cz=ttk.Combobox(r,values=["Amravati","Aurangabaad","Konkan","Nagpur","Nashik","Pune"],font=("Times New Roman",15),textvariable=dist)
+cz.grid(row=11,column=1,sticky=W)
 
 ly=Label(r,text="Select Age: ",font=("Times New Roman",15,"bold"),padx=10,pady=10)
 ly.grid(row=12,column=0,sticky=W)
@@ -113,4 +112,4 @@ b1.grid(row=14,column=0,padx=10,pady=10)
 b2=Button(r,text="Exit",font=("Times New Roman",15,"bold"),padx=27,bg="darkred",fg="white")
 b2.grid(row=14,column=1,padx=10,pady=10)
 
-r.mainloop()
+r.mainloop() 

@@ -1,0 +1,4 @@
+User_Name           User Email            Mobile Number    Gender             Skills      Password Division         Age
+
+Sarim		    sarim123@gmail.com		    9876543210		male		Python|Rust|		123		Pune		    19
+Abdullah	    abdullah192@gmail.com	    9087654321		male		Python|Java|		098		Aurangabaad		23
