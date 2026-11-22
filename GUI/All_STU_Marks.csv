@@ -1,4 +1,6 @@
-Roll no.,Name,Class,Gender,DSA,Java,OSY,Total,Percentage
-Roll no.,Name,Class,Gender,DSA,Java,OSY,Total,Percentage
-01,Alice,FE (Degree),Male,89,78,98,265,88.33
-3,Alice,TE (Degree),Male,89,56,78,223,74.33
+Roll no.,Name,Class,Gender,DSA,Java,OSY,Total,Percentage,grade
+1,Alice,FY (Diploma),Male,98,76,82,256,85.33,Distinction
+2,Bob,SY (Diploma),Male,90,56,76,222,74.0,Good
+5,Charlie,SE (Degree),Male,64,78,87,229,76.33,Distinction
+19,Sara,BE (Degree),Female,78,65,98,241,80.33,Distinction
+12,qasim,TE (Degree),Male,23,67,94,184,61.33,C

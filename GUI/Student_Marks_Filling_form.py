@@ -26,21 +26,41 @@ def submit():
     
     total=int(DS.get())+int(JF.get())+int(OS.get())
     percent=round(total/3,2)
+    if 100>percent>90:
+        grade="O"
+    elif 90>=percent>80:
+        grade="A"
+    elif 80>=percent>70:
+        grade="B"
+    elif 70>=percent>60:
+        grade="C"
+    elif 60>percent>50 :
+        grade="D"
+    elif 50>percent>40 :
+        grade="E"
+    else:
+        grade="Fail"
 
+    D=DS.get()
+    J=JF.get()
+    O=OS.get()
     if roll.get()=="" or Name.get()=="" or Class.get()=="" or gender.get()=="" or DS.get()=="" or JF.get()=="" or OS.get()=="":
         messagebox.showerror("Unfilled","All fields should be filled in")
+    elif int(D)>100 or int(J)>100 or int(O)>100:
+        messagebox.showerror("Digit","Marks should be less than or equal to 100")
     else:
         Dict = {"Roll no.": roll.get(),"Name": Name.get(),"Class": Class.get(),
     "Gender": gender.get(),"DSA": DS.get(),"Java": JF.get(),"OSY": OS.get(),
-    "Total": total,"Percentage": percent}
+    "Total": total,"Percentage": percent,"Grade":grade}
         with open("All_STU_Marks.csv","a",newline="") as A:
-            fields=["Roll no.","Name","Class","Gender","DSA","Java","OSY","Total","Percentage"]
+            fields=["Roll no.","Name","Class","Gender","DSA","Java","OSY","Total","Percentage","Grade"]
             w=csv.DictWriter(A,fieldnames=fields)
             # w.writeheader()
             w.writerow(Dict)
             A.close()
+        messagebox.showinfo("Complete","Marks Submitted Successfully")
 
-roll=StringVar(value="01")
+roll=StringVar(value="1")
 Name=StringVar()
 Class=StringVar(value="None")
 gender=StringVar(value="Male")
