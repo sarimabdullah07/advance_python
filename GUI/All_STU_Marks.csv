@@ -1,6 +1,8 @@
-Roll no.,Name,Class,Gender,DSA,Java,OSY,Total,Percentage,grade
-1,Alice,FY (Diploma),Male,98,76,82,256,85.33,Distinction
-2,Bob,SY (Diploma),Male,90,56,76,222,74.0,Good
-5,Charlie,SE (Degree),Male,64,78,87,229,76.33,Distinction
-19,Sara,BE (Degree),Female,78,65,98,241,80.33,Distinction
-12,qasim,TE (Degree),Male,23,67,94,184,61.33,C
+Roll no.,Name,Class,Gender,DSA,Java,OSY,Total,Percentage,Grade
+13,Alice,FY (Diploma),Male,76,78,86,240,80.0,B
+14,Bob,SY (Diploma),Male,78,96,56,230,76.67,B
+20,Charlie,TY (Diploma),Male,67,86,59,212,70.67,B
+25,David,FE (Degree),Male,90,94,83,267,89.0,A
+9,Eve,SE (Degree),Female,60,72,85,217,72.33,B
+24,Frank,TE (Degree),Male,87,98,65,250,83.33,A
+16,Gwen,BE (Degree),Female,96,98,94,288,96.0,O
